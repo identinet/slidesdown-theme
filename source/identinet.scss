@@ -1,0 +1,236 @@
+/**
+ * identinet theme for reveal.js.
+ * Author: Jan Christoph Ebersbach
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+// @import url('identinet/fonts/Work_Sans/work-sans.css');
+
+// @import url('https://fonts.googleapis.com/css?family=Open Sans:400,700&display=swap');
+// @import url('identinet/fonts/Open_Sans/opensans.css');
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+$darkPrimary1: #00345e;
+$darkPrimary2: #004f91;
+$lightPrimary1: #039be5;
+$lightPrimary2: #4fc3f7;
+$lightPrimary3: #b3e5fc;
+$lightSecondary1: #ec407a;
+$lightSecondary2: #f48fb1;
+$lightSecondary3: #fce4ec;
+$black: #212121;
+$grey80: #424242;
+$grey60: #757575;
+$grey40: #bdbdbd;
+$grey20: #eeeeee;
+$grey10: #f5f5f5;
+$grey5: #fafafa;
+$white: #ffffff;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $grey5;
+
+$mainColor: $grey80;
+$headingColor: $black;
+
+$mainFontSize: 42px;
+$mainFont: "Inter", sans-serif;
+$headingFont: "Space Grotesk", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: $darkPrimary2;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+// $heading1Size: 2.3rem;
+// $heading2Size: 1.65rem;
+// $heading3Size: 1.55rem;
+// $heading4Size: 1.3rem;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+:root {
+  --darkPrimary1: #{$darkPrimary1};
+  --darkPrimary2: #{$darkPrimary2};
+  --lightPrimary1: #{$lightPrimary1};
+  --lightPrimary2: #{$lightPrimary2};
+  --lightPrimary3: #{$lightPrimary3};
+  --lightSecondary1: #{$lightSecondary1};
+  --lightSecondary2: #{$lightSecondary2};
+  --lightSecondary3: #{$lightSecondary3};
+  --black: #{$black};
+  --grey80: #{$grey80};
+  --grey60: #{$grey60};
+  --grey40: #{$grey40};
+  --grey20: #{$grey20};
+  --grey10: #{$grey10};
+  --grey5: #{$grey5};
+  --white: #{$white};
+}
+
+// .reveal a {
+//   text-decoration: underline;
+// }
+
+// .reveal a:hover {
+//   text-decoration: none;
+// }
+
+// .reveal .slides section,
+// .reveal .slides section > section {
+//   line-height: 1.2;
+// }
+
+// .reveal #slide-number {
+//   bottom: 0;
+//   right: 2rem;
+//   height: 3rem;
+//   display: flex !important;
+//   flex-direction: column;
+//   justify-content: center;
+//   color: inherit;
+//   font-size: inherit;
+//   font-family: $headingFont;
+//   background: transparent;
+// }
+
+// html {
+//   font-size: $mainFontSize;
+// }
+
+// // spare header
+// div.reveal {
+//     margin-top: 3rem;
+//     margin-bottom: 3rem;
+// }
+
+// li {
+//   margin-top: 0.2rem;
+// }
+
+// #title-slide p.subtitle,
+// #title-slide p.author,
+// #title-slide p.date {
+//   color: $grey60;
+// }
+
+// #title-slide p.subtitle {
+//   font-size: $heading3Size;
+// }
+
+#slide-header #slide-header1:after {
+  content: var(--slideshow-title) ", " var(--slideshow-date) ", "
+    var(--slideshow-author);
+}
+
+#slide-header,
+#slide-footer {
+  z-index: 99;
+  height: 2rem;
+  position: fixed;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: 0 2rem;
+}
+
+#slide-header {
+  height: 100px;
+  display: flex;
+  // visibility: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#slide-footer {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// #slide-header:before,
+// #slide-footer:after {
+//   border-bottom: 1px $darkPrimary2 solid;
+// }
+
+// #slide-header:after,
+// #slide-footer:before {
+//   border-bottom: 1px $lightPrimary2 solid;
+// }
+
+// #slide-header:before,
+// #slide-header:after,
+// #slide-footer:before,
+// #slide-footer:after {
+//   width: 100%;
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   right: 0px;
+//   left: 0px;
+//   height: 1px;
+// }
+
+// #slide-header:before {
+//   bottom: 0px;
+// }
+//
+// #slide-header:after {
+//   bottom: -2px;
+// }
+//
+// #slide-footer:before {
+//   top: -3px;
+// }
+//
+// #slide-footer:after {
+//   top: -1px;
+// }
+
+#slide-header1 {
+  display: flex;
+  color: $grey80;
+  font-family: $headingFont;
+  // font-size: var(--r-heading2-size);
+  font-size: 50%;
+}
+
+#slide-header {
+  top: 0;
+  // border-bottom: 1px $lightPrimary1 solid;
+  background-image: url("./images/identinet_long_background_transparent.svg");
+  background-position: center right 4rem;
+  background-size: auto 40%;
+  // background-color: $black;
+}
+
+#slide-footer {
+  bottom: 0;
+  // border-top: 1px $lightSecondary2 solid;
+  // background-image: url("./images/identinet_square_background_white.svg");
+  // background-position: center right 4rem;
+  // background-size: auto 50%;
+  // background-color: $black;
+}
