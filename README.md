@@ -42,6 +42,9 @@ Each theme file does four things in the following order:
 
 ## Use Theme
 
-1. Identify the URL of the theme's compiled CSS file, e.g.
-   [https://identinet.github.io/slidesdown-theme/identinet.css](https://identinet.github.io/slidesdown-theme/identinet.css).
-2. Reference theme URL in presentation.
+Add these settings to the presentation:
+
+```yaml
+theme: https://identinet.github.io/slidesdown-theme/identinet.css
+favicon: https://identinet.github.io/slidesdown-theme/images/favicon.svg
+```
