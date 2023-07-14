@@ -1,0 +1,15 @@
+{
+  "name": "slidesdown-theme",
+  "version": "0.0.1",
+  "description": "identinet slidesdown theme",
+  "main": "serve.js",
+  "repository": "git@github.com:identinet/slidesdown-theme.git",
+  "author": "Jan Christoph Ebersbach <jan-christoph.ebersbach@identinet.io>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "cd source && npx sass --no-source-map identinet.scss:../identinet.css",
+    "compile-watch": "yarn run compile --watch",
+    "serve": "npx http-server -a localhost -p 8080 ."
+  },
+  "private": false
+}

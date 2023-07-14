@@ -1,16 +1,27 @@
-# slidesdown-theme
+# slidesdewn-theme
 
 [identinet theme](https://github.com/identinet/slidesdown-theme/) for
 [slidesdown](https://slidesdown.github.io/)
 
-## Dependencies
+## Use Theme
+
+Add these settings to the presentation:
+
+```yaml
+theme: https://identinet.github.io/slidesdown-theme/identinet.css
+favicon: https://identinet.github.io/slidesdown-theme/images/favicon.svg
+```
+
+## Development
+
+### Dependencies
 
 Themes are written using Sass to keep things modular and reduce the need for
 repeated selectors across files. Make sure that you have the reveal.js
 development environment installed before proceeding:
 https://revealjs.com/installation/#full-setup
 
-## Create Theme
+### Create Theme
 
 To create your own theme, start by duplicating a `.scss` file in
 [/css/theme/source](https://github.com/hakimel/reveal.js/blob/master/css/theme/source).
@@ -36,15 +47,28 @@ Each theme file does four things in the following order:
    The template theme file which will generate final CSS output based on the
    currently defined variables.
 
-## Publish Theme
+Compile theme:
 
-1. Publish the theme online, e.g. via GitHub Pages
+```bash
+yarn run compile
 
-## Use Theme
+# or recompile for every change
+yarn run compile-watch
+```
 
-Add these settings to the presentation:
+Host theme locally so it can be included in the presentation:
+
+```bash
+yarn run serve
+```
+
+Add these settings to the presentation to test the theme:
 
 ```yaml
-theme: https://identinet.github.io/slidesdown-theme/identinet.css
-favicon: https://identinet.github.io/slidesdown-theme/images/favicon.svg
+theme: http://localhost:8080/identinet.css
+favicon: http://localhost:8080/images/favicon.svg
 ```
+
+### Publish Theme
+
+1. Publish the theme online, e.g. via GitHub Pages
