@@ -8,28 +8,23 @@
 Add these settings to the presentation:
 
 ```yaml
-theme: https://identinet.github.io/slidesdown-theme/identinet.css
 favicon: https://identinet.github.io/slidesdown-theme/images/favicon.svg
+theme: https://identinet.github.io/slidesdown-theme/identinet.css
 ```
 
 ## Development
 
-### Dependencies
-
-Themes are written using Sass to keep things modular and reduce the need for
-repeated selectors across files. Make sure that you have the reveal.js
-development environment installed before proceeding:
-https://revealjs.com/installation/#full-setup
-
 ### Create Theme
 
-To create your own theme, start by duplicating a `.scss` file in
-[/css/theme/source](https://github.com/hakimel/reveal.js/blob/master/css/theme/source).
-It will be automatically compiled from Sass to CSS (see the
-[gulpfile](https://github.com/hakimel/reveal.js/blob/master/gulpfile.js)) when
-you run `npm run build -- css-themes`.
+Themes are written in [Sass](https://sass-lang.com/) to keep things modular and
+reduce the need for repeated selectors across files. To install all dependencies
 
-Each theme file does four things in the following order:
+1. Clone this repository
+2. Then create your own theme, start by duplicating a `.scss` file from
+   [reveal.js](https://github.com/hakimel/reveal.js/blob/master/css/theme/source)
+   and place it in the [`./source`](./source) folder.
+
+#### Each theme file does four things in the following order
 
 1. **Include
    [/css/theme/template/mixins.scss](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/mixins.scss)**
@@ -47,28 +42,41 @@ Each theme file does four things in the following order:
    The template theme file which will generate final CSS output based on the
    currently defined variables.
 
-Compile theme:
+#### Compile theme
 
 ```bash
 yarn run compile
 
-# or recompile for every change
+# or recompile at every modification
 yarn run compile-watch
 ```
 
-Host theme locally so it can be included in the presentation:
+#### Host theme locally so it can be included in the presentation
 
 ```bash
 yarn run serve
 ```
 
-Add these settings to the presentation to test the theme:
+#### Create an [example presentation](https://github.com/slidesdown/slidesdown/blob/main/examples/SLIDES.md)
+
+```bash
+curl -LO https://github.com/slidesdown/slidesdown/raw/main/examples/SLIDES.md
+```
+
+#### Enable theme and favicon by changing these settings in the presentation
 
 ```yaml
-theme: http://localhost:8080/identinet.css
 favicon: http://localhost:8080/images/favicon.svg
+theme: http://localhost:8080/identinet.css
+```
+
+#### Serve the presentation locally via [slidesdown CLI](https://github.com/slidesdown/slidesdown/tree/main#installation)
+
+```bash
+slidesdown -d
 ```
 
 ### Publish Theme
 
-1. Publish the theme online, e.g. via GitHub Pages
+Publish the theme online so it can be referenced from everywhere, e.g. via
+[GitHub Pages](https://pages.github.com/).
