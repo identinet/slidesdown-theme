@@ -139,23 +139,18 @@ $heading4Size: 1em;
 //   font-size: $heading3Size;
 // }
 
-#slide-header #slide-header1:after {
-  content: var(--slideshow-title) ", " var(--slideshow-date) ", "
-    var(--slideshow-author);
-}
-
 #slide-header,
 #slide-footer {
-  z-index: 99;
-  height: 2rem;
-  position: fixed;
+  z-index: 9;
+  height: 6rem;
+  position: absolute;
   width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
-  margin: 0 2rem;
 }
 
 #slide-header {
-  height: 100px;
+  top: 0;
   display: flex;
   // visibility: hidden;
   justify-content: space-between;
@@ -163,11 +158,11 @@ $heading4Size: 1em;
 }
 
 #slide-footer {
-  visibility: hidden;
+  bottom: 0;
   display: flex;
-  justify-content: center;
+  // visibility: hidden;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 // #slide-header:before,
@@ -209,7 +204,26 @@ $heading4Size: 1em;
 //   top: -1px;
 // }
 
-#slide-header1 {
+#slide-header {
+  // border-bottom: 1px $lightPrimary1 solid;
+  background-image: url("./images/identinet_long_background_transparent.svg");
+  background-position: center right 4rem;
+  background-size: auto 40%;
+  // background-color: $lightPrimary1;
+}
+
+// #slide-footer {
+//   // background-color: red;
+//   // border-top: 1px $lightSecondary2 solid;
+//   // background-image: url("./images/identinet_square_background_white.svg");
+//   // background-position: center right 4rem;
+//   // background-size: auto 50%;
+//   // background-color: $darkPrimary1;
+// }
+
+#slide-footer #slide-footer-1,
+#slide-footer #slide-footer-2,
+#slide-footer #slide-footer-3 {
   display: flex;
   color: $grey80;
   font-family: $headingFont;
@@ -217,20 +231,18 @@ $heading4Size: 1em;
   font-size: 50%;
 }
 
-#slide-header {
-  top: 0;
-  // border-bottom: 1px $lightPrimary1 solid;
-  background-image: url("./images/identinet_long_background_transparent.svg");
-  background-position: center right 4rem;
-  background-size: auto 40%;
-  // background-color: $black;
+#slide-footer #slide-footer-1 {
+  padding-left: 4rem;
 }
 
-#slide-footer {
-  bottom: 0;
-  // border-top: 1px $lightSecondary2 solid;
-  // background-image: url("./images/identinet_square_background_white.svg");
-  // background-position: center right 4rem;
-  // background-size: auto 50%;
-  // background-color: $black;
+#slide-footer #slide-footer-3 {
+  padding-right: 4rem;
+}
+
+#slide-footer #slide-footer-1:after {
+  content: var(--slideshow-date);
+}
+
+#slide-footer #slide-footer-3:after {
+  content: var(--slideshow-title) ", " var(--slideshow-author);
 }
