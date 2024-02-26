@@ -9,7 +9,7 @@
   "scripts": {
     "compile": "cd source && npx sass --no-source-map identinet.scss:../identinet.css",
     "compile-watch": "yarn run compile --watch",
-    "serve": "npx http-server -a localhost -p 8080 ."
+    "serve": "npx http-server -a localhost -p 8080 --cors=Access-Control-Allow-Origin=* ."
   },
   "private": false
 }
