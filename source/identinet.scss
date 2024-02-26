@@ -24,7 +24,8 @@ $darkPrimary2: #004f91;
 $lightPrimary1: #039be5;
 $lightPrimary2: #4fc3f7;
 $lightPrimary3: #b3e5fc;
-$lightSecondary1: #ec407a;
+$lightSecondary1: #d902e6;
+// $lightSecondary1: #ec407a;
 $lightSecondary2: #f48fb1;
 $lightSecondary3: #fce4ec;
 $black: #212121;
@@ -40,7 +41,7 @@ $white: #ffffff;
 $backgroundColor: $grey5;
 
 $mainColor: $grey80;
-$headingColor: $black;
+$headingColor: $darkPrimary2;
 
 $mainFontSize: 42px;
 $mainFont: "Inter", sans-serif;
@@ -49,9 +50,9 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: $darkPrimary2;
+$linkColor: $lightPrimary1;
 $linkColorHover: lighten($linkColor, 15%);
-$selectionBackgroundColor: lighten($linkColor, 25%);
+$selectionBackgroundColor: lighten($lightSecondary1, 25%);
 
 // $heading1Size: 2.3rem;
 // $heading2Size: 1.65rem;
