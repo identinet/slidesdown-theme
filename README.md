@@ -57,6 +57,9 @@ yarn run compile-watch
 yarn run serve
 ```
 
+Or access sample persentation with theme via:
+<https://slidesdown.github.io/?slides=http%3A%2F%2Flocalhost%3A8080%2FSLIDES.md>
+
 #### Create an [example presentation](https://github.com/slidesdown/slidesdown/blob/main/examples/SLIDES.md)
 
 ```bash
