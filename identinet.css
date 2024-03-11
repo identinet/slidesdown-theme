@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * identinet theme for reveal.js.
  * Author: Jan Christoph Ebersbach
@@ -426,5 +427,5 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 #slide-footer #slide-footer-3:after {
-  content: var(--slideshow-title) ", " var(--slideshow-author);
+  content: var(--slideshow-title) " — " var(--slideshow-author);
 }
