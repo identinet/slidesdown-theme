@@ -18,7 +18,7 @@ fontawesomeFree: false
 # Show progress bar
 progress: true
 # Show controls
-controls: true
+controls: false
 # Center presentation
 center: true
 # Create separate pages for fragments

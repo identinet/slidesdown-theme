@@ -143,7 +143,7 @@ $heading4Size: 1em;
 #slide-header,
 #slide-footer {
   z-index: 9;
-  height: 6rem;
+  height: 8vh;
   position: absolute;
   width: 100%;
   width: 100vw;
@@ -229,7 +229,8 @@ $heading4Size: 1em;
   color: $grey80;
   font-family: $headingFont;
   // font-size: var(--r-heading2-size);
-  font-size: 50%;
+  // font-size: 50%;
+  font-size: 2.5vh;
 }
 
 #slide-footer #slide-footer-1 {
