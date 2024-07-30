@@ -271,14 +271,14 @@ body {
   /* use your favorite color */
 }
 
-:is(tbody, table) > tr:nth-child(odd) {
+:is(tbody, table)>tr:nth-child(odd) {
   /* background: #0001; */
   background: rgb(240, 240, 240);
   /* or #fff1 for dark themes */
   border-bottom: none;
 }
 
-:is(code) * :is(tbody, table) > tr:nth-child(odd) {
+:is(code) * :is(tbody, table)>tr:nth-child(odd) {
   /* background: #0001; */
   background: inherit;
   /* or #fff1 for dark themes */
@@ -289,4 +289,16 @@ td,
 th {
   padding: 0.5em;
   /* or 0.5em 1em... or any value different from 0 */
+}
+
+pre.code-wrapper>code,
+img {
+  border-radius: 0.25rem;
+  box-shadow:
+    var(--un-shadow-inset) 0 4px 6px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1)),
+    var(--un-shadow-inset) 0 2px 4px -2px var(--un-shadow-color, rgb(0 0 0 / 0.1));
+}
+
+pre.code-wrapper>code {
+  padding: 0.5rem 1rem;
 }
