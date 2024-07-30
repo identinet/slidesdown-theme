@@ -5,6 +5,7 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff;
 }
@@ -31,12 +32,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading2-size: 1.6em;
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
-  --r-code-font: monospace;
+  --r-code-font: JetBrains Mono, monospace;
   --r-link-color: #039be5;
   --r-link-color-dark: #026899;
   --r-link-color-hover: #38bcfc;
   --r-selection-background-color: #f56afe;
   --r-selection-color: #fff;
+  --r-overlay-element-bg-color: 240, 240, 240;
+  --r-overlay-element-fg-color: 0, 0, 0;
 }
 
 .reveal-viewport {
@@ -428,4 +431,33 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 #slide-footer #slide-footer-3:after {
   content: var(--slideshow-title) " — " var(--slideshow-author);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  accent-color: #039be5;
+  /* use your favorite color */
+}
+
+:is(tbody, table) > tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.0666666667);
+  /* or #fff1 for dark themes */
+}
+
+td,
+th {
+  padding: 0.5em;
+  /* or 0.5em 1em... or any value different from 0 */
 }

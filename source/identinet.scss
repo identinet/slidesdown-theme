@@ -18,6 +18,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 $darkPrimary1: #00345e;
 $darkPrimary2: #004f91;
@@ -46,6 +47,7 @@ $headingColor: $darkPrimary2;
 $mainFontSize: 42px;
 $mainFont: "Inter", sans-serif;
 $headingFont: "Space Grotesk", sans-serif;
+$codeFont: "JetBrains Mono", monospace;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
@@ -247,4 +249,35 @@ $heading4Size: 1em;
 
 #slide-footer #slide-footer-3:after {
   content: var(--slideshow-title) " — " var(--slideshow-author);
+}
+
+// Tips from CSS one-liners https://alvaromontoro.com/blog/68055/ten-css-one-liners-for-almost-every-project
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  accent-color: $lightPrimary1;
+  /* use your favorite color */
+}
+
+:is(tbody, table)>tr:nth-child(odd) {
+  background: #0001;
+  /* or #fff1 for dark themes */
+}
+
+td,
+th {
+  padding: 0.5em;
+  /* or 0.5em 1em... or any value different from 0 */
 }
