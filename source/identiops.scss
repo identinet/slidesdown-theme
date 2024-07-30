@@ -1,0 +1,14 @@
+/**
+ * identinet theme for reveal.js.
+ * Author: Jan Christoph Ebersbach
+ */
+
+@import "./identinet.scss";
+
+#slide-header {
+  // border-bottom: 1px $lightPrimary1 solid;
+  background-image: url("./images/identiops_long_background_transparent.svg");
+  background-position: center right 4rem;
+  background-size: auto 40%;
+  // background-color: $lightPrimary1;
+}

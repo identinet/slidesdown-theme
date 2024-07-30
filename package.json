@@ -7,7 +7,7 @@
   "author": "Jan Christoph Ebersbach <jan-christoph.ebersbach@identinet.io>",
   "license": "MIT",
   "scripts": {
-    "compile": "cd source && npx sass --no-source-map identinet.scss:../identinet.css",
+    "compile": "cd source && npx sass --no-source-map identinet.scss:../identinet.css identiops.scss:../identiops.css",
     "compile-watch": "yarn run compile --watch",
     "serve": "npx http-server -a localhost -p 8080 --cors=Access-Control-Allow-Origin=* ."
   },
