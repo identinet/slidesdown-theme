@@ -302,3 +302,24 @@ img {
 pre.code-wrapper>code {
   padding: 0.5rem 1rem;
 }
+
+/* reduce font size of sub-items */
+li {
+  font-size: inherit;
+}
+
+li li {
+  font-size: calc(100% * 0.8);
+}
+
+li li li {
+  font-size: calc(100% * 0.8);
+}
+
+li li li li {
+  font-size: calc(100% * 0.8);
+}
+
+li li li li li {
+  font-size: calc(100% * 0.8);
+}
