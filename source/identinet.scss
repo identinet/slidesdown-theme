@@ -309,17 +309,21 @@ li {
 }
 
 li li {
-  font-size: calc(100% * 0.8);
+  font-size: 80%;
 }
 
 li li li {
-  font-size: calc(100% * 0.8);
+  font-size: 80%;
 }
 
 li li li li {
-  font-size: calc(100% * 0.8);
+  font-size: 80%;
 }
 
 li li li li li {
-  font-size: calc(100% * 0.8);
+  font-size: 80%;
+}
+
+figure caption {
+  font-size: 60%;
 }
